@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="95eab7f4-bd6e-4783-9aa7-443e210b8062" name="Sudeep Sir" url="http://192.168.0.48">
+        <fileTransfer host="192.168.0.48" port="22" rootFolder="/home/cedcoss/SudeepBackup/Apps/HubspotAndImporter/Hubspot" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
