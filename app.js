@@ -6,7 +6,7 @@ var logger = require('morgan');
 const mongoClient = require('mongodb').MongoClient;
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var yahooRouter = require('./routes/yahoo');
 const authRouter = require('./routes/auth');
 
 var app = express();
@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //     res.send(responseText)
 // });
 
-app.use('/users', usersRouter);
+app.use('/yahoo', yahooRouter);
 
 app.use(authRouter);
 // catch 404 and forward to error handler

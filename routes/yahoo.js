@@ -4,6 +4,7 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
+	const location = req.query['location'] ? req.query['location'] : '';
 	const OAuth = require('oauth');
 	let header = {
 	    "X-Yahoo-App-Id": "NIsmUI4o"
@@ -19,8 +20,9 @@ router.get('/', function(req, res, next) {
 	    null,
 	    header
 	);
+	console.log('https://weather-ydn-yql.media.yahoo.com/forecastrss?location=' + location + '&format=json');
 	request.get(
-	    'https://weather-ydn-yql.media.yahoo.com/forecastrss?location=lucknow,in&format=json',
+	    'https://weather-ydn-yql.media.yahoo.com/forecastrss?location=' + location + '&format=json',
 	    null,
 	    null,
 	    function (err, data, result) {
